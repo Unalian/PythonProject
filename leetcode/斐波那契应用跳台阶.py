@@ -3,6 +3,7 @@
 # dp[0] = 0 dp[1] = 1 dp[2]=2
 # dp[n] = dp[n-1]+dp[n-2]
 
+
 class Solution:
     def func(self, n):
         if n == 0:
