@@ -2,6 +2,7 @@
 # 动态规划： dp[n] 指以n结尾的子序列的最长递增序列长度
 # 转移方程是 dp[n] = dp[j] + 1(j 遍历0，n-1 如果nums[n]>nums[j] and dp[j] is max)
 # max(dp) 可以求数组最大值
+"""子序列-一维数组"""
 class Solution:
 
     def the_max_raise_son_que(self, nums):

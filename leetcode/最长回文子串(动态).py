@@ -1,3 +1,6 @@
+"""
+动态-子串-二维
+"""
 class Solution:
     def func(self, s):
         ans = ""
