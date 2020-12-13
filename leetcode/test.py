@@ -17,13 +17,13 @@ class Solution:
         dp2 = list(que)
         print(dp2)
 
+    def func3(self):
+        list = [1,2,3]
+        print(list[:3])
 
 # str = list(map(int,sys.stdin.readline().split()))
 #print(str)
 # print(type(str))
 
-
-
-
-testA  = Solution()
-testA.func2()
+A = Solution()
+A.func3()

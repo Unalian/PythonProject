@@ -3,10 +3,7 @@ class TreeNode(object):
          self.val =data
          self.left =left
          self.right =right
-     def __init__(self, x):
-         self.val = x
-         self.left = None
-         self.right = None
+
 """
 A = TreeNode('A','B','C')
 B = TreeNode('B',None,'D')
