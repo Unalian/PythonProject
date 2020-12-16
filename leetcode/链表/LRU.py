@@ -29,11 +29,14 @@ class LRU:
             self.dirt_key_value[key].value = value
             self.set_mid_node_last(self.dirt_key_value[key])
         else:
-            if self.capacity_used == self.capacity - 1:
+            if self.capacity_used == self.capacity:
                 self.chain_action_remove_first()
+                self.capacity_used -= 1
+            self.capacity_used += 1
             new_node = Node(key, value)
             self.dirt_key_value[key] = new_node
             self.chain_action_put_last(new_node)
+
 
     def chain_action_put_last(self, node_put_last):
         node_put_last.next = self.chain_last
@@ -46,7 +49,7 @@ class LRU:
         node_mid.next.pre = node_mid.pre
 
     def chain_action_remove_first(self):
-        self.dirt_key_value.pop(self.chain_head.key)
+        self.dirt_key_value.pop(self.chain_head.next.key)
         self.chain_head.next = self.chain_head.next.next
         self.chain_head.pre = self.chain_head
 
@@ -54,14 +57,19 @@ class LRU:
         self.chain_action_remove_mid(node_mid)
         self.chain_action_put_last(node_mid)
 
+def traserve(head):
+
+    if head is None:
+        return
+    print(head.key)
+    traserve(head.next)
 
 
 
-test = LRU(10)
-test.set(1, 2)
-test.set(2, 3)
-test.set(2, 5)
-test.get(1)
-print(test.chain_head.next.next.value)
+test = LRU(2)
+test.set(1, 1)
+test.set(2, 2)
+test.set(3, 3)
+traserve(test.chain_head)
 
 
