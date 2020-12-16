@@ -1,5 +1,6 @@
 import sys
 from collections import deque
+import heapq
 class Solution:
     def func(self,s):
         print(s[1:2+1])
@@ -21,9 +22,36 @@ class Solution:
         list = [1,2,3]
         print(list[:3])
 
+
+    def func4(self):
+        try:
+            while True:
+                line = sys.stdin.readline().strip()
+                if line == '':
+                    break
+                a = list(map(int, (line).split(' ')))
+        except:
+            pass
+
+
+    def func5(self):
+        a = sys.stdin.readlines()
+        output_thing = []
+        for line in a:
+            readed_thing = list(map(int, line.split()))
+            output_thing.append(readed_thing)
+        print(output_thing)
+
+
+    def fun6(self):
+        heap_thing = heapq.heapify([])
+        heap_thing.heappush()
+
+
+
 # str = list(map(int,sys.stdin.readline().split()))
 #print(str)
 # print(type(str))
 
 A = Solution()
-A.func3()
+A.func5()

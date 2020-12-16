@@ -35,4 +35,27 @@ def traverse(root):
     traverse(root.right)
 
 
-traverse(max_tree([3,2,1,6,0,5]))
+# 中后
+def buildTree(inorder, postorder):
+    if not postorder:
+        return
+    root = TreeNode(postorder[-1])
+    rootid = inorder.index(root.item)
+
+    root.left = buildTree(inorder[:rootid], postorder[:rootid])
+    root.right =buildTree(inorder[rootid:-1], postorder[rootid+1:])
+    return root
+
+
+# 前中
+def reConstructBinaryTree(pre, tin):#pre、tin分别是前序序列和中序序列
+    # write code here
+    if len(pre)>0:
+        root = TreeNode(pre[0])#前序序列的第一个肯定是当前子树的根节点
+        rootid = tin.index(root.item)#通过根节点在中序序列中的位置划分出左右子树包含的节点
+        root.left = reConstructBinaryTree(pre[1:1+rootid], tin[:rootid])#重建左子树
+        root.right = reConstructBinaryTree(pre[1+rootid:], tin[rootid+1:])#重建右子树
+        return root
+
+traverse(buildTree(['d','b','a','c','e'], ['d', 'b', 'e', 'c', 'a'] ))
+
