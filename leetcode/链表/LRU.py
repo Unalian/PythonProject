@@ -57,8 +57,8 @@ class LRU:
         self.chain_action_remove_mid(node_mid)
         self.chain_action_put_last(node_mid)
 
-def traserve(head):
 
+def traserve(head):
     if head is None:
         return
     print(head.key)

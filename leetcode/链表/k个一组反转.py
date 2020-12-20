@@ -1,3 +1,6 @@
+
+# 先做前n个反转的递归，再递归入上一层k个一组
+
 class Node:
     def __init__(self, value = None, next_node = None):
         self.value = value

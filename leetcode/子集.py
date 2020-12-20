@@ -18,6 +18,8 @@ class Solution:
         for k in range(0, n+1):
             back()
         return output
+
+
     # 无重复
     def findSub3(self,nums):
         output0 = [[]]
@@ -29,6 +31,8 @@ class Solution:
             if i not in output:
                 output.append(i)
         return output
+
+
     def findSub1(self, nums):
         output = [[]]
         for num in nums:
@@ -39,7 +43,7 @@ class Solution:
 
 
 a = Solution()
-print (Solution.findSub3(a, [4,4,4,1,4]))
+print (Solution.findSub3(a, [1,2,2,3]))
 
 
 

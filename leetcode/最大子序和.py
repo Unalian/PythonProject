@@ -1,13 +1,16 @@
 class Solution:
     def func(self,nums):
-        dp= max(0, nums[0])
+        if len(nums) == 1:
+            return max(0, nums[0])
+        dp = nums[0]
         maxSum = nums[0]
         for i in range(1, len(nums)):
             dp = max(dp, 0) + nums[i]
             maxSum = max(dp, maxSum)
         return maxSum
 
-
+a = Solution()
+print (a.func([-1, 2, 3, -3, 4]))
 """
 class Solution:
     def func(self, nums):
@@ -38,12 +41,4 @@ class Solution:
 
 
 
-
-
-
-
-
-
-a = Solution()
-print (a.func([1]))
 
