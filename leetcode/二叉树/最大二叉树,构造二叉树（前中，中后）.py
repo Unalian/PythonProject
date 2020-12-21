@@ -43,7 +43,7 @@ def buildTree(inorder, postorder):
     rootid = inorder.index(root.item)
 
     root.left = buildTree(inorder[:rootid], postorder[:rootid])
-    root.right =buildTree(inorder[rootid:-1], postorder[rootid+1:])
+    root.right =buildTree(inorder[rootid+1:], postorder[rootid:-1])
     return root
 
 
