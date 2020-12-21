@@ -25,5 +25,8 @@ def func(dirct):
     dirct = {y : x for x, y in dirct.items()}
     print(dirct)
 
-
+# 正无穷大
 float("inf")
+
+# 三元运算符
+ print('a的值比较大！') if a > b else print('b的值比较大！')
