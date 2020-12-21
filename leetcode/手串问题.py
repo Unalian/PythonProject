@@ -1,6 +1,7 @@
+
+"""
 import sys
 class Solution:
-    # n 珠子个数 m 不能重复范围 c 颜色个数
 
 
 
@@ -23,3 +24,4 @@ print(listOfColor)
 
 a = Solution()
 a.func(n, m, c, tuple(listOfColor))
+"""

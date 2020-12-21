@@ -16,7 +16,6 @@ def heapify(arr, n, i):
 
     if largest != i:
         arr[i], arr[largest] = arr[largest], arr[i]  # 交换
-
         heapify(arr, n, largest)
 
 def heapSort(arr):

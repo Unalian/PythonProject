@@ -24,3 +24,6 @@ def read_data():
 def func(dirct):
     dirct = {y : x for x, y in dirct.items()}
     print(dirct)
+
+
+float("inf")
